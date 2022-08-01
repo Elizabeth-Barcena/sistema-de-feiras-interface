@@ -1,0 +1,13 @@
+.arremates_container{
+    border: 2px solid red;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arremates_container_h1{
+    margin-bottom: 0.5em;
+}
+.arremates_container_p{
+    color:darkslategrey ;
+}

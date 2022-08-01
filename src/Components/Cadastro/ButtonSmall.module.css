@@ -1,0 +1,18 @@
+.btn{
+    background-color: rgb(0, 92, 20);
+    color: #fff;
+    padding:  2em;
+    text-decoration: none;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15vh;
+    height:0px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    }
+    .btn:hover{
+    color: chartreuse;
+    }
