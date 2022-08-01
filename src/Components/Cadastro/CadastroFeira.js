@@ -1,7 +1,7 @@
 
 import styles from './CadastroFeira.module.css'
 import { useState } from 'react';
-
+import axios from 'axios';
 
 
 function CadastroFeira(){ 
@@ -13,20 +13,31 @@ function CadastroFeira(){
             [value.target.name]:value.target.value,
         }))
     }
-     function handleClickButton(){
-        fetch("http://localhost:4000/feiras", {
+    /*  function handleClickButton(){
+        console.log(values);
+         fetch("http://localhost:4000/feiras", {
             method: "POST",
-            body: JSON.stringify({
+            body: {
                 name: values.name,
                 local:values.local,
-                data: values.data
-            }),
+                data: values.data,
+            },
+            headers: {
+                "Content-type": "application/json;"
+                
+            },mode: "cors"
             })
-            .then(response => response.json())
-            .then(json => console.log(json));
 
-                }
-   
+                }*/
+
+     function handleClickButton(){
+        console.log(values);
+         axios.post("http://localhost:4000/feiras", {
+            data: values.data,
+            name: values.name,
+            local: values.local,
+        })
+    }
     return (
         
         <div >
@@ -71,5 +82,6 @@ function CadastroFeira(){
         </div>
        
     ) 
-}
+    }
+
 export default CadastroFeira
