@@ -1,7 +1,9 @@
 
 import styles from './MostrarFeiras.module.css'
 import{useEffect,useState} from "react"
-import ButtonSmall from './ButtonSmall';
+import { FcPlus, FcRefresh, FcFullTrash,FcSearch} from "react-icons/fc";
+import { TiTrash } from "react-icons/tb";
+import Table from 'react-bootstrap/Table';
 
 function MostrarFeiras(){
     const[feiras,CadastroFeira]=useState([]);
@@ -15,31 +17,60 @@ function MostrarFeiras(){
     },[])
 console.log(feiras);
 
-    const feira = () => {
-        return feiras.map(item=>{
-            return( 
-                <div className={styles.left}>
-                    <div className={styles.border}>
-                    <div>{item.id}</div>
-                    <div>{item.nome}</div>
-                    <div>{item.local} </div>
-                    <div>{item.data}</div>
-                    
-                </div>
+return <div className={styles.container}> 
+       <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome da feira</th>
+          <th>Local da feira</th>
+          <th>Data da feira</th>
+          <th> </th>
+          <th> </th>
+          <th> </th>
+          <th> </th>               
+        </tr>
+      </thead>
+      <tbody>
+      {
+                feiras.map(({id, nome, local, data})=>{
+                    return <tr key={id}>
+                        <td> {id}</td>
+                        <td> {nome}</td>
+                        <td> {local}</td>
+                        <td> {data}</td>
+                        <td>
+                            <button>
+                            <FcPlus size={25}/>
+                            </button>
+                        </td>
+                        <td>  
+                            <button >
+                            <TiTrash size={25} />
+                            </button>
+                        </td>
+                        <td>  
+                            <button >
+                            <FcRefresh size={25}/>
+                            </button>
+                        </td>
+                        <td>  
+                            <button >
+                            <FcSearch size={25}/>
+                            </button>
+                        </td>
+                        
+                    </tr>
+                })
 
-                <div className={styles.right}><ButtonSmall to="/MostrarArremates" text="Arremates"/></div>
+                }
+      </tbody>
+    </Table>
 
-
-                </div>
-                
-                
-           
-            )
-        })
+</div>
+        
+         
+       
     }
-    return(
-        <div className={styles.container}>{feira()}</div>
-    )
 
-}
 export default MostrarFeiras
