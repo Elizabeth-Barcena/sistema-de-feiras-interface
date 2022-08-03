@@ -1,7 +1,7 @@
 .footer{
     background-color: rgb(0, 92, 20);
     color: #fff;
-    padding: 2em;
+    padding: 1em;
     text-align: center;
     }
     .social_list{
@@ -16,11 +16,11 @@
     color: chartreuse;
     }
     .social_list svg{
-    font-size: 1.5em;
+    font-size: 1em;
     cursor: pointer;
     }
     .copy_right{
-    margin-top: 2em;
+    margin-top: 1em;
     }
     .copy_right span{
     font-weight: bold;

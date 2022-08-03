@@ -1,7 +1,12 @@
+import { MdSettingsPhone } from "react-icons/md";
+import styles from './Contact.module.css'
 function Contact(){
     return(
-        <div>
-            <h1> Contatos </h1> 
+        <div style={styles.Contact}>
+            <div style={{color: 'green', outline: 0 } }>
+                         <p><MdSettingsPhone size={25}/> Telefone: (53) 3211-0350 </p>   
+            </div>
+
         </div>
     )
 }

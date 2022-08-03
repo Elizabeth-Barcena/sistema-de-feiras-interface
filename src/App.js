@@ -9,6 +9,7 @@ import Arremate from './Components/Pages/Arremate';
 import GerenciarTarefas from './Components/Pages/GerenciarTarefas';
 import MostrarFeiras from './Components/Cadastro/MostrarFeiras';
 import MostrarArremates from './Components/Cadastro/MostrarArremates';
+import CadastroFeira from './Components/Cadastro/CadastroFeira';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             <Route path= "/Home" element={<Home/>}/>
             <Route path= "/MostrarFeiras" element={<MostrarFeiras/>}/>
             <Route path= "/MostrarArremates" element={<MostrarArremates/>}/>
+            <Route path= "/CadastroFeira" element={<CadastroFeira/>}/>
           </Routes>
         </Container>
       <Footer/>
