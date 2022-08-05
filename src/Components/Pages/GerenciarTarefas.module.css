@@ -7,32 +7,37 @@
     }
 
 .left{
-    width: 50%;
+    width: 30%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-     margin-right: 20px;
-
+    margin-right: 20px;
+}
+.left h1{
+    width: 100%;
+    font-size: 1.5em;
+    margin-bottom: .6em;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+}
+.alter{
 }
 .right{
-    width: 50%;
+    width: 70%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 20px;
 }
-.right img{
-    margin: 10px;
-    width: 800px;
-    height: 400px;
-}
 .right h1{ 
     width: 100%;
     font-size: 1.5em;
     margin-bottom: .6em;
-    padding: 1em;
+    padding: 0.1em;
     display: flex;
-    align-items: center;
-    justify-content: center;
 
 }

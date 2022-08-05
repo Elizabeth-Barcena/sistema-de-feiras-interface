@@ -10,12 +10,12 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { BiEdit } from "react-icons/bi";
-function MostrarArremates(props){
+function MostrarArremates({idFeira}){
     const[Arremate, CadastroArremate]= useState([]);
 
     useEffect(()=>{
         
-    fetch('http://localhost:4000/arremate', {method: 'GET'})
+    fetch(`http://localhost:4000/arremate/${idFeira}`, {method: 'GET'})
     .then(response=> response.json())
     .then(data => CadastroArremate(data))
     .catch(error=>{console.log(error.response)})
@@ -27,7 +27,7 @@ console.log( Arremate);
             <div className={styles.container}>
                 <input/>
                 <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+                <Table sx={{ minWidth: 90, minHeight: 90 }} size="small" aria-label="a dense table">
                 <TableHead>
                     <TableRow>
                     <TableCell>ID</TableCell>

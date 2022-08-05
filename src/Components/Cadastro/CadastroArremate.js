@@ -66,8 +66,6 @@ function CadastroArremate({btnText}){
                         name="Cabeças"
                         placeholder="Insira as cabeças"
                         />
-            
-     
                         <Input
                         type="text"
                         text="Localidade"

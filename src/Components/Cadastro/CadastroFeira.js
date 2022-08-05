@@ -42,7 +42,7 @@ function CadastroFeira(){
     }*/
     return (
         
-        <div >
+        <div className={styles.form_control}>
             <div className={styles.form_control}>
             <label htmlFor={"Name"}>{"Nome da feira"}:</label>
             <input

@@ -11,14 +11,14 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { BiEdit ,BiTrash} from "react-icons/bi";
 import { VscFileSubmodule } from "react-icons/vsc";
-
+import {Link} from "react-router-dom"
 function MostrarFeiras(){
     const [initialRepos, setInitialRespo]= useState([]);
     const[repos, setRepos]= useState([]);
     
    
     useEffect(()=> {
-        const fetchRespos=async ()=>{
+        const fetchRespos = async ()=> {
             try{
                 const response =await fetch('http://localhost:4000/feiras');
                 const data= await response.json();
@@ -48,7 +48,7 @@ return (
             onChange={handleChange}
         />
         <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} size="small" aria-label="a dense table">
+      <Table sx={{ minWidth: 90, minHeight: 90 }}  size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
             <TableCell>ID</TableCell>
@@ -87,11 +87,12 @@ return (
                             </button>
             </TableCell>
             <TableCell align="right">
-                            <button to="/MostrarArremates">
-                            <div style={{color: 'green', outline: 0 } }>
+                           <Link to={`/Arremate?idFeira=${id}`}> <div style={{color: 'green', outline: 0 } }>
                             <VscFileSubmodule size={25}/>
-                            </div>
-                            </button>
+                            </div></Link>
+                           
+                           
+                            
             </TableCell>
             
             </TableRow>

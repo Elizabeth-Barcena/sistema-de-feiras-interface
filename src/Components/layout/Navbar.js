@@ -5,7 +5,7 @@ import logo from '../../img/Logo.png'
 import {  MdSettingsPhone } from "react-icons/md";
 import { BsCart4 } from "react-icons/bs";
 import { FaHome } from "react-icons/fa";
-import { MdAppRegistration } from "react-icons/md";
+
 
 function Navbar(){
     return(
@@ -39,15 +39,7 @@ function Navbar(){
                         </Link>
                     </li>
                     <li class={styles.item}>
-                        <Link to="/Feiras">
-                        <div div style={{color: 'white', outline: 0 } }>
-                                <p>Cadastrar feiras <MdAppRegistration size={25}/></p>
-                                
-                            </div>
-                        </Link>
-                    </li>
-                    <li class={styles.item}>
-                        <Link to="/Mostrarfeiras">
+                        <Link to="/GerenciarTarefas">
                         <div div style={{color: 'white', outline: 0 } }>
                                 <p>Gerenciar feiras <BsCart4 size={25}/></p>
                             </div>
