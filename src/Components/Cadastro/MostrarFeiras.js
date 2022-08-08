@@ -80,18 +80,17 @@ return (
                             </button>
             </TableCell>
             <TableCell align="right">
-                            <button>
+                            <button style={styles.btn}>
                             <div style={{color: 'green', outline: 0 } }>
                             <BiTrash size={25}/>
                             </div>
                             </button>
             </TableCell>
             <TableCell align="right">
-                           <Link to={`/Arremate?idFeira=${id}`}> <div style={{color: 'green', outline: 0 } }>
+                           <Link to={`/Arremate?idFeira=${id}`}> 
+                           <div style={{color: 'green', outline: 0 } }>
                             <VscFileSubmodule size={25}/>
                             </div></Link>
-                           
-                           
                             
             </TableCell>
             

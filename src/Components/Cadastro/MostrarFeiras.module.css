@@ -10,3 +10,6 @@ input{
     border: solid 2px #ccc ;
     width: calc(100%- 20px);
 }
+btn{
+    border: none;
+}
