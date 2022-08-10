@@ -12,14 +12,14 @@ import { VscFileSubmodule } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import styles from "./MostrarFeiras.module.css";
 
-function MostrarFeiras() {
+function MostrarFeiraId() {
     const [initialRepos, setInitialRespo] = useState([]);
     const [repos, setRepos] = useState([]);
 
     useEffect(() => {
         const fetchRespos = async () => {
             try {
-                const response = await fetch("http://localhost:4000/feiras");
+                const response = await fetch("http://localhost:4000/feiras/${feiraId}");
                 const data = await response.json();
                 setInitialRespo(data);
                 setRepos(data);
@@ -141,4 +141,4 @@ function MostrarFeiras() {
     );
 }
 
-export default MostrarFeiras;
+export default MostrarFeiraId;

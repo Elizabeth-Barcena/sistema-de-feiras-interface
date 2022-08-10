@@ -1,8 +1,7 @@
 
 import MostrarArremates from "../Cadastro/MostrarArremates"
 import styles from "./Arremate.module.css"
-import {Link,useLocation} from 'react-router-dom'
-import { BiAddToQueue } from "react-icons/bi";
+import {useLocation} from 'react-router-dom'
 import {useMemo} from "react";
 
 function useQuery() {
@@ -16,7 +15,7 @@ function useQuery() {
   function Arremate(){
       const query = useQuery()
 
-      console.log('query: ',query.get('idFeira'))
+      console.log('query: ',query.get('feiraId'))
       
     return(
         <section className={styles.container}>
@@ -25,13 +24,10 @@ function useQuery() {
                 <h1>Tabela</h1>
             </div>
             <div className={styles.LinkButton}>
-                     <MostrarArremates idFeira={query.get('idFeira')}/>
+                     <MostrarArremates feiraId={query.get('feiraId')}/>
                 </div>
             </div>
-            <Link to="/CadastroArremate"> 
-            <div style={{color: 'green', outline: 0 } }>
-                 <BiAddToQueue size={25}/>
-            </div></Link>
+            
 
         </section>
     )

@@ -1,13 +1,14 @@
 import CadastroFeira from '../Cadastro/CadastroFeira'
 import styles from './Feiras.module.css'
 import MostrarFeiras from '../Cadastro/MostrarFeiras';
+import AtualizarFeira from '../Cadastro/AtualizarFeira';
 
-function Feiras(){
+function AtualizaFeiras(){
     return (
         <section className={styles.container}>
           <div className={styles.left}>
             <div className={styles.LinkButton}>
-              <CadastroFeira/>
+            <AtualizarFeira/> 
             </div>
     
           </div>
@@ -16,7 +17,7 @@ function Feiras(){
               <h1>Tabela</h1>
             </div>
             <div className={styles.LinkButton}>
-              <MostrarFeiras/>
+             <MostrarFeiras/>
             </div>
     
           </div>
@@ -24,6 +25,5 @@ function Feiras(){
     
       );
     }
-export default Feiras
-//
-//
+export default AtualizaFeiras
+//  

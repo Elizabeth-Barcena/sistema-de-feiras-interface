@@ -39,9 +39,9 @@ function Navbar(){
                         </Link>
                     </li>
                     <li class={styles.item}>
-                        <Link to="/GerenciarTarefas">
+                        <Link to="/Feiras">
                         <div div style={{color: 'white', outline: 0 } }>
-                                <p>Gerenciar feiras <BsCart4 size={25}/></p>
+                                <p>Feiras <BsCart4 size={25}/></p>
                             </div>
                         </Link>
                     </li>

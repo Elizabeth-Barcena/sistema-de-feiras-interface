@@ -1,10 +1,9 @@
-
 import styles from './CadastroFeira.module.css'
 import { useState } from 'react';
 
 //import axios from 'axios'
 
-function CadastroFeira(){ 
+function AtualizarFeira(feiraId){ 
 
     const[values, setValues] = useState();
     console.log(values);
@@ -17,13 +16,13 @@ function CadastroFeira(){
     }
 
     const requestOptions={
-        method: 'POST',
+        method: 'PUT',
         body: JSON.stringify(values),
         headers: {
             'Content-type': 'application/json'
         }
     }
-    const url="http://localhost:4000/feiras"
+    const url=`http://localhost:4000/feiras/${feiraId}`
 
      function handleClickButton(){
         console.log("valores",{values});
@@ -71,7 +70,7 @@ function CadastroFeira(){
          
 
             <button className={styles.btn} onClick={
-                ()=> handleClickButton()}>Cadastrar
+                ()=> handleClickButton()}>Atualizar
                 </button>
          
         </div>
@@ -79,4 +78,4 @@ function CadastroFeira(){
     ) 
     }
 
-export default CadastroFeira
+export default AtualizarFeira

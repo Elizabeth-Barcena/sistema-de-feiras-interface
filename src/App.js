@@ -6,9 +6,11 @@ import Navbar from './Components/layout/Navbar';
 import Footer from './Components/layout/Footer';
 import Feiras from './Components/Pages/Feiras';
 import Arremate from './Components/Pages/Arremate';
-import GerenciarTarefas from './Components/Pages/GerenciarTarefas';
 import MostrarArremates from './Components/Cadastro/MostrarArremates';
 import CadastroArremate from './Components/Cadastro/CadastroArremate'
+import AtualizaFeiras from './Components/Pages/AtualizaFeiras';
+import AtualizarFeira from './Components/Cadastro/AtualizarFeira'
+import CadastroFeira from './Components/Cadastro/CadastroFeira';
 function App() {
 
   return (
@@ -20,10 +22,12 @@ function App() {
             <Route path= "/Contact" element={<Contact/>}/> 
             <Route path= "/Feiras" element={<Feiras/>}/> 
             <Route path= "/Arremate" element={<Arremate/>}/>
-            <Route path= "/GerenciarTarefas" element={<GerenciarTarefas/>}/>
             <Route path= "/Home" element={<Home/>}/>
             <Route path= "/MostrarArremates" element={<MostrarArremates/>}/>
             <Route path= "/CadastroArremate" element={<CadastroArremate/>}/>
+            <Route path= "/CadastroFeira" element={<CadastroFeira/>}/>
+            <Route path= "/AtualizarFeira" element={<AtualizarFeira/>}/>
+            <Route path= "/AtualizaFeiras" element={<AtualizaFeiras/>}/>
           </Routes>
         </Container>
       <Footer/>
