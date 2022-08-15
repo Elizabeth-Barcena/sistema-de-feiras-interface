@@ -118,7 +118,7 @@ function MostrarFeiras() {
                                         />
                                     </Link>
 
-                                    <Link to="/AtualizaFeiras">
+                                    <Link to={`/AtualizaFeiras?id=${repo.id}`}>
                                         <BiEdit
                                             style={{
                                                 color: "green",
